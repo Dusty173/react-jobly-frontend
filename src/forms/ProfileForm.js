@@ -11,9 +11,6 @@ function ProfileForm() {
     username: currentUser.username,
     password: "",
   });
-  const [formErrors, setFormErrors] = useState([]);
-
-  const [saveConfirmed, setSaveConfirmed] = useState(false);
 
   async function handleSubmit(evt) {
     evt.preventDefault();
@@ -32,13 +29,10 @@ function ProfileForm() {
       updatedUser = await JoblyApi.saveProfile(username, profileData);
     } catch (errors) {
       debugger;
-      setFormErrors(errors);
       return;
     }
 
     setFormData((f) => ({ ...f, password: "" }));
-    setFormErrors([]);
-    setSaveConfirmed(true);
 
     setCurrentUser(updatedUser);
   }
@@ -49,7 +43,7 @@ function ProfileForm() {
       ...f,
       [name]: value,
     }));
-    setFormErrors([]);
+
   }
 
   return (

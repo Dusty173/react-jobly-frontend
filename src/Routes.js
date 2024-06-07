@@ -21,7 +21,7 @@ function Routes({ login, signup }) {
           <LoginForm login={login} />
         </Route>
 
-        <Route exact path="signup">
+        <Route exact path="/signup">
           <SignupForm signup={signup} />
         </Route>
 

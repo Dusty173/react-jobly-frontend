@@ -10,7 +10,6 @@ function SignupForm({ signup }) {
     lastName: "",
     email: "",
   });
-  const [formErrors, setFormErrors] = useState([]);
 
   async function handleSubmit(evt) {
     evt.preventDefault();
@@ -18,7 +17,7 @@ function SignupForm({ signup }) {
     if (result.success) {
       history.push("/companies");
     } else {
-      setFormErrors(result.errors);
+      console.log("unable to submit")
     }
   }
 
