@@ -1,0 +1,10 @@
+.CompanyCard {
+  max-height: 250px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.CompanyCard img {
+  width: 50px;
+}
